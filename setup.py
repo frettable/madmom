@@ -34,19 +34,6 @@ extensions = [
 # define scripts to be installed by the PyPI package
 scripts = glob.glob('bin/*')
 
-# define the models to be included in the PyPI package
-package_data = ['models/LICENSE',
-                'models/README.rst',
-                'models/beats/201[56]/*',
-                'models/chords/*/*',
-                'models/chroma/*/*',
-                'models/downbeats/*/*',
-                'models/key/2018/*',
-                'models/notes/*/*',
-                'models/onsets/*/*',
-                'models/patterns/*/*',
-                ]
-
 # some PyPI metadata
 classifiers = ['Development Status :: 3 - Alpha',
                'Programming Language :: Python :: 2.7',
@@ -87,7 +74,6 @@ setup(name='madmom',
       license='BSD, CC BY-NC-SA',
       packages=find_packages(exclude=['tests', 'docs']),
       ext_modules=cythonize(extensions),
-      package_data={'madmom': package_data},
       exclude_package_data={'': ['tests', 'docs']},
       scripts=scripts,
       install_requires=requirements,
