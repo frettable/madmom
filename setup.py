@@ -92,6 +92,4 @@ setup(name='madmom',
       scripts=scripts,
       install_requires=requirements,
       cmdclass={'build_ext': build_ext},
-      setup_requires=['setuptools_scm==3.0.0', 'pytest-runner==2.12.1'],
-      tests_require=['pytest'],
       classifiers=classifiers)
